@@ -30,7 +30,7 @@
 ### Personal records
 
 - **Income and expenditure:** record income, cash transactions, household bills, vehicle expenses, and imported statement data. Use monthly CSV templates and exports, and configure a financial-year start month.
-- **Doctor visits and medical reports:** keep dated visit notes and lab measurements such as blood sugar, thyroid, urine tests, urine cultures, and blood pressure. Add values and reference ranges, or import supported text and CSV data. These records are for personal tracking, not diagnosis.
+- **Personal Health Journal:** organize care visits, dated lab measurements such as blood sugar, thyroid, urine tests, urine cultures, and blood pressure, plus notes and reference ranges. Import supported text and CSV data. These records are for personal tracking, not diagnosis.
 - Personal records are organized by month and are available only when the user is signed in, has connected a Data Source, and enabled the relevant feature.
 
 ### Insights and appearance

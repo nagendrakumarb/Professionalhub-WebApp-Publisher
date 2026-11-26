@@ -1,75 +1,77 @@
-# Professional Hub
+# Professional Hub — WebAssembly Release & Deployment
 
-**Professional Hub** is a responsive, browser-based career and learning workspace. It brings together resume preparation, job search, examinations, personal tracking, reporting, and an optional AI learning assistant.
+**Professional Hub** is a responsive, browser-based career and learning workspace that brings together resume preparation, job search, examinations, personal tracking, reporting, and an optional local AI learning assistant.
 
-**Live application:** [https://professionalhub.co.in](https://professionalhub.co.in)
+**Live Application:** [https://professionalhub.co.in](https://professionalhub.co.in)
 
-## What the application includes
+> **Repository Note:** This repository hosts the **compiled Blazor WebAssembly deployment artifacts** published via automated GitHub Actions workflows for GitHub Pages hosting. Core application source code, internal libraries, and authoring tools are maintained in a private repository to protect proprietary intellectual property.
 
-### Resume tools
+---
 
+## Architecture & Deployment Overview
+
+- **Static Blazor WebAssembly PWA:** Delivered as a client-side Progressive Web App with no server-side model or application backend.
+- **Automated Release Pipeline:** Built and deployed automatically from the private upstream codebase to GitHub Pages via CI/CD workflows.
+- **Local-First Privacy Model:** Resume parsing and analysis run directly in the user's browser, while optional user records are stored in the user's chosen local folder or personal Google Drive.
+
+---
+
+## What the Application Includes
+
+### Resume Tools
 - Check a PDF or DOCX resume for ATS readability, structure, contact details, skills, achievements, and other practical signals.
-- Compare a resume with a job description and review matched skills, gaps, and improvement suggestions.
+- Compare a resume with a job description to review matched skills, gaps, and improvement suggestions.
 - Review score details and print or save reports as PDF.
-- Get exam recommendations based on skills found in a resume or job match. Recommendations are informational; they do not change ATS or job-match scores. Signed-in users can have recommendations filtered against exams they have already passed.
-- Signed-in users can save a personal resume to their selected Data Source, replace it with an archive of the previous copy, and apply restrained heading colors to supported DOCX resumes.
-- Use resume correction and improvement tools while reviewing proposed changes and the supporting evidence.
+- Get exam recommendations based on skills found in a resume or job match (informational only; they do not alter ATS or job-match scores). Signed-in users can filter recommendations against exams already passed.
+- Save a personal resume to a connected Data Source, replace it while archiving the previous copy, and apply restrained heading colors to supported DOCX resumes.
+- Apply resume correction and improvement tools while reviewing proposed changes and supporting evidence.
 
-### Job search and applications
-
-- Search configured public job sources and optional credential-based providers, with role and location preferences.
-- Review job matches, save relevant jobs, track application status, and retrieve associated tailored resumes.
-- Provider availability depends on the provider and network. Optional provider credentials are managed in Configuration.
+### Job Search & Applications
+- Search configured public job sources and optional credential-based providers using role and location preferences.
+- Review job matches, save relevant listings, track application statuses, and retrieve associated tailored resumes.
+- Manage optional provider credentials directly in Configuration.
 
 ### Open Exam Suite
-
 - Maintain a candidate profile and browse the available exam library.
-- Take or practise exams, review attempts and results, and view certificates associated with the profile.
-- View exam activity and career-workspace progress on the dashboard.
+- Take or practice exams, review attempts and results, and view digital certificates associated with the profile.
+- Track exam activity and career-workspace progress on the dashboard.
 
-### Personal records
+### Personal Records
+- **Income & Expenditure:** Record income, cash transactions, household bills, vehicle expenses, and imported statement data using monthly CSV templates, exports, and a configurable financial-year start month.
+- **Personal Health Journal:** Organize care visits, dated lab measurements (blood sugar, thyroid, urine tests, urine cultures, blood pressure), notes, and reference ranges, with text and CSV import support.
+- Personal records are organized by month and available only when signed in with a connected Data Source and the relevant feature enabled.
 
-- **Income and expenditure:** record income, cash transactions, household bills, vehicle expenses, and imported statement data. Use monthly CSV templates and exports, and configure a financial-year start month.
-- **Personal Health Journal:** organize care visits, dated lab measurements such as blood sugar, thyroid, urine tests, urine cultures, and blood pressure, plus notes and reference ranges. Import supported text and CSV data. These records are for personal tracking, not diagnosis.
-- Personal records are organized by month and are available only when the user is signed in, has connected a Data Source, and enabled the relevant feature.
+### Insights & Appearance
+- Explore resume, finance, and health records through interactive Power BI-style report views, including summary cards, KPI gauges, tables, bar/column charts, trends, compositions, and analytical breakdowns.
+- Print reports or export via the browser's **Save as PDF** option.
+- Customize the workspace with editor-inspired color themes and accent colors.
 
-### Insights and appearance
-
-- Explore resume, finance, and medical records through selectable Power BI-style report views, including summary cards, KPI/gauge, tables, bar/column, trend, composition, and analysis representations.
-- Print reports or use the browser's Save as PDF option.
-- Choose from a range of editor-inspired color themes and accent colors for the application interface.
-
-### Optional learning assistant
-
-- Open the floating chat assistant from within the application and converse with a configured local model runtime (currently Ollama).
-- Send text and supported attachments, including common text, CSV, PDF, DOCX, and image formats, subject to file-size and model limits.
+### Optional AI Learning Assistant
+- Open the floating chat assistant inside the app to converse with a configured local model runtime (currently **Ollama**).
+- Send text and supported attachments (text, CSV, PDF, DOCX, and common image formats) subject to file-size and model limits.
 - Receive streamed replies and structured follow-up choices or forms.
-- The assistant is optional and depends on the user's model setup and browser access to it. The current chat is a learning assistant: it does not execute Professional Hub actions or read private application records, and attached learning files are not automatically indexed into a persistent RAG knowledge base.
+- *Scope:* The assistant is optional and depends on the user's local model setup. It operates as an interactive learning assistant—it does not execute Professional Hub actions, read private application records, or index attached files into a persistent knowledge base.
 
-## Sign-in, data sources, and privacy
+---
 
-- Google sign-in identifies the user. Connecting a Data Source is a separate step and separate permission.
-- Users can choose a local folder where supported by their browser, or connect Google Drive. The two sources are separate; changing sources does not automatically move or synchronize existing data.
-- A connected Data Source can hold the user's enabled settings and records. Local-folder access may need to be reselected after a browser session ends. Google may ask the user to reconnect Drive access.
-- Resume analysis is performed in the browser. When the user chooses a model and sends a chat message or attachment, that content is sent to that configured model connection. Job searches and public job imports contact the selected external provider or source.
-- The application is hosted as a static Blazor WebAssembly Progressive Web App. It does not host a server-side model or application backend. Network-dependent services require an internet connection.
+## Sign-In, Data Sources & Privacy
 
-## Responsive use
+- **Authentication:** Google sign-in identifies the user; connecting a Data Source is a separate step with explicit permission.
+- **Storage Options:** Choose a browser-supported local folder or connect Google Drive. The two sources are independent and do not automatically synchronize.
+- **Session Persistence:** Local-folder access may need to be reselected after a browser session ends, and Google may periodically ask to reconnect Drive access.
+- **Data Boundaries:** Resume analysis runs locally in the browser. Chat messages or attachments are sent only to the user's configured model connection, and job searches contact only the selected external job providers.
 
-The interface is designed to adapt to desktop and mobile browsers. It can be installed as a Progressive Web App where the browser and operating system support installation. Browser capabilities such as local-folder access, Google sign-in, and printing vary by platform.
+---
 
-## Project structure
+## Responsive & PWA Support
 
-- `src/Apps/WebApp` — Professional Hub Blazor WebAssembly application.
-- `src/Dependencies/OmniFlow/MAF.Agents` — reusable agent runtime, streaming, and RAG building blocks.
-- `src/Dependencies/OmniFlow/MAF.Agents.Razor` — reusable Blazor chat launcher, drawer, and interaction components.
-- `docs` — product specifications, implementation plans, and UAT checklists.
+The interface adapts across desktop and mobile browsers and can be installed as a Progressive Web App (PWA) on supported operating systems. Capabilities such as local-folder access, Google sign-in, and printing vary by browser and platform.
 
-The MAF and RAG libraries are also the hands-on learning path for extending the assistant. The code-based lessons use Professional Hub as the working example; planned capabilities are tracked separately from features already available in the app.
+---
 
-## Important notes
+## Important Notes
 
 - ATS and job-match scores are diagnostic estimates, not hiring guarantees or employer decisions.
-- Users should verify suggestions and only include skills, experience, qualifications, and achievements that are accurate.
-- Medical reference ranges are recorded for comparison and do not constitute medical advice or diagnosis.
-- Power BI-style views are generated by Professional Hub; they are not a connection to the Microsoft Power BI service.
+- Users should verify all suggestions and include only accurate skills, experience, qualifications, and achievements.
+- Health reference ranges are recorded for personal comparison and do not constitute medical advice or diagnosis.
+- Power BI-style views are generated natively by Professional Hub and are not connected to the Microsoft Power BI service.

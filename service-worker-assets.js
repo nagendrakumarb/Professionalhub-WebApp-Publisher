@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "xW4FAvpW",
+  "version": "Suk1EeYZ",
   "assets": [
     {
       "hash": "sha256-AbpHGcgLb+kRsJGnwFEktk7uzpZOCcBY74+YBdrKVGs=",
@@ -106,16 +106,16 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.z6kw0vh2f7.wasm"
     },
     {
-      "hash": "sha256-78Dw9L2fpMJt7ImFJTuU2sqoy+0MjtJAFXRIwnkQyoE=",
-      "url": "_framework/OpenExamSuite.Core.ny9ym16uwl.wasm"
+      "hash": "sha256-KUzXclr8c1B2+veCdas8Aj+1VubKvR7BkYxawtlBCn0=",
+      "url": "_framework/OpenExamSuite.Core.l9tc132qgl.wasm"
     },
     {
-      "hash": "sha256-ptRUamJMTSwYGbBJJO2Y3faGf28+Mq+45k1fQyIU9sk=",
-      "url": "_framework/OpenExamSuite.ExamIO.29q70x3o9h.wasm"
+      "hash": "sha256-MD7b2fnDGBhnJW9syueewxtPpb5O++PYUaV60xWZOAE=",
+      "url": "_framework/OpenExamSuite.ExamIO.s9d0bglur1.wasm"
     },
     {
-      "hash": "sha256-6pLkt0sUDLoU+z6g4mF2jta6mdyofyD997tXy3N/PTI=",
-      "url": "_framework/OpenExamSuite.Logging.i2hy06ruii.wasm"
+      "hash": "sha256-qb0K7ELtwbocLSVNTfrYUaRQIUIgo49x/3NT2Ej/Kao=",
+      "url": "_framework/OpenExamSuite.Logging.llen01fuqm.wasm"
     },
     {
       "hash": "sha256-ImL1D4yDVhvpKHK2lJYYAlMExjc0My/HrjqeLMfjPxc=",
@@ -154,16 +154,16 @@ self.assetsManifest = {
       "url": "_framework/PdfSharp.WPFonts.kh5yhb0xew.wasm"
     },
     {
-      "hash": "sha256-+8rjwpobXZeI3LveZD+G5sdEMX5VFJyCEiMZ5vDavN4=",
-      "url": "_framework/ProfessionalHub.AI.PortableRuntime.xdtlliznol.wasm"
+      "hash": "sha256-3mSSGXbbbJNUKomIxFXmmPvZfNciwmZu7tdljAjpIAU=",
+      "url": "_framework/ProfessionalHub.AI.PortableRuntime.qlhng7elr9.wasm"
     },
     {
-      "hash": "sha256-/6jQEEJHCUEMh9EUm+O5OiTpI+WOeECOTsrQtrLSuSo=",
-      "url": "_framework/ProfessionalHub.Core.339kmq0n2g.wasm"
+      "hash": "sha256-RWuSkanEOnDe1lSuUdKfCOE/KfcZsF+4U2xPtakv3W0=",
+      "url": "_framework/ProfessionalHub.Core.71p0ip8h7d.wasm"
     },
     {
-      "hash": "sha256-TgI7HDKpgT+H6OVrka8IAD6sfrZtXlVkGqJwQSTQH3g=",
-      "url": "_framework/ProfessionalHub.e9i9dvbq3j.wasm"
+      "hash": "sha256-21RP2tyhkjhJNgGMyWitZE1A9ugqRO02C2RiIbRRmEI=",
+      "url": "_framework/ProfessionalHub.bkgw55maxe.wasm"
     },
     {
       "hash": "sha256-nYdX2z+zj5LXNQAhMlieQNwLWOwRTY8/tabYC0XBTIQ=",
@@ -414,7 +414,7 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-cwWjION2r2wZTDcd0toRidQnPIhYrHsDhB8i6FXnrhw=",
+      "hash": "sha256-3lD/eS8GWVKQ1YAvE2FrFVzqP1lbCflTMAoWniqY428=",
       "url": "_framework/dotnet.js"
     },
     {
